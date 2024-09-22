@@ -3,11 +3,17 @@ name: Shell Commands
 # events
 on: [push]
 
+# Job
 jobs:
+  # name of the job
   run-shell-command:
+    # virtual runner
     runs-on: ubuntu-latest
+    # steps to follow
     steps:
+      # an array
       - name: echo a string
+        # what to do
         run: echo "Hello there world"
       - name: multiline script
         run: |
