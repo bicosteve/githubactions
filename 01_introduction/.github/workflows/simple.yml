@@ -1,0 +1,38 @@
+name: Shell Commands
+
+# events
+on:
+  push:
+    branches:
+      - main
+# Job
+# You can set up notification in github settings
+jobs:
+  # name of the job
+  run-shell-command:
+    # virtual runner
+    runs-on: ubuntu-latest
+    # steps to follow
+    steps:
+      # an array
+      - name: echo a string
+        # what to do
+        run: echo "Hello there world"
+      - name: multiline script
+        run: |
+          node -v 
+          npm -v
+      - name: python command
+        run: |
+          import platform
+          print(platform.processor())
+        shell: python
+  run-windows-command:
+    runs-on: windows-latest
+    needs: [run-shell-command] #means this job needs the run-shell-command
+    steps:
+      - name: Directory Powershell
+        run: Get-Location
+      - name: Directory Bash
+        run: pwd
+        shell: bash
