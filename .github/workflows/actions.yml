@@ -34,3 +34,5 @@ jobs:
       - name: Log Greeting Time
         # github actions stores variable of step ids
         run: echo "${{ steps.greet.outputs.time }}"
+
+    # checkout github actions market place
