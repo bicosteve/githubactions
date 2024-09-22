@@ -6,6 +6,7 @@ on:
     branches:
       - main
 # Job
+# You can set up notification in github settings
 jobs:
   # name of the job
   run-shell-command:
@@ -21,3 +22,8 @@ jobs:
         run: |
           node -v 
           npm -v
+      - name: python command
+        run: |
+          import platform
+          print(platform.processor())
+        shell: python
