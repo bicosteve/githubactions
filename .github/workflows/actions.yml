@@ -9,8 +9,19 @@ jobs:
   run-github-actions:
     runs-on: ubuntu-latest
     steps:
+      - name: List Files
+        run: |
+          pwd
+          ls -a
+      - name: Checkout
+        uses: actions/checkout@v1 #authenticate with your repository commit and pullcode
+      - name: List Files After Checout
+        run: |
+          pwd
+          ls -a
       - name: Simple Javascript Action
         id: greet
+        # action-code someone has written and you can use in your code
         uses: actions/hello-world-javascript-action@v1
         with:
           who-to-greet: John
