@@ -1,0 +1,22 @@
+What is Github Actions
+- A tool that lets you automate your software development workflows
+- You can write individual task, called actions and then combine them to create a custom workflow 
+
+What is work flow?
+- these are custom automated processes that you can set up in your repository to 
+    1. Build 
+    2. Test 
+    3. Package 
+    4. Release 
+    5. Deploy
+ any code project in Github 
+- github events run on a virtual github server 
+
+Other Terms 
+Runner - any machine with github action runner application installed 
+Runner is responsible for running your jobs whenever an even happens and displays back the results 
+Can be hosted by github or you can host your own runner 
+Runners can be linux, windows, macos virtual environments
+Event - push or pull request 
+Workflow - triggered by events or schedules
+Job - Jobs perform some steps which can perform some actions 
