@@ -1,9 +1,10 @@
 name: Shell Commands
 
 # events
-on: [push]
-  branches:
-      - main 
+on:
+  push:
+    branches:
+      - main
 # Job
 jobs:
   # name of the job
